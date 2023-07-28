@@ -49,7 +49,7 @@ const Recipegen = () => {
 
   const displayResultWithLineBreaks = (result) => {
     return result.split('\n').map((line, index) => (
-      <React.Fragment className="recipe-text" key={index}>
+      <React.Fragment key={index}>
         {line}
         <br />
       </React.Fragment>
