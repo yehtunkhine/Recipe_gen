@@ -1,0 +1,7 @@
+.Wrapper{
+    display:flex;
+    background-color:#F9D6AE;
+    width:90%;
+    height:90vh;
+    border-radius: 20px;
+}
