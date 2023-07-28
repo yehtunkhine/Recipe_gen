@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import axios from 'axios';
 import "./recipe_gen.css"
+
+
 const Recipegen = () => {
-  const [message,setMessage] = useState('');
   const [inputValue, setInputValue] = useState("Ingredients list:\n1. \n2. \n3. \n4. ");
   const [reply,setReply] = useState('');
 
@@ -11,7 +12,7 @@ const Recipegen = () => {
     if (inputValue.trim() ==='') return;
     
     const apiUrl = 'https://api.openai.com/v1/engines/text-davinci-003/completions';
-    const apiKey = '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';
+    const apiKey = process.env.REACT_APP_API_KEY;
 
     try{
       let finalPrompt = "Give me a reciepe that only uses the following ingeridents with ingredients measurement as list and step by step cooking process.\n" + inputValue;
